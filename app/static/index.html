@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KarbonWise | ESG Data Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <h1>KarbonWise</h1>
+            </div>
+            <div class="header-actions">
+                <button id="refresh-btn" class="btn-secondary">Refresh Data</button>
+                <div class="status-indicator">
+                    <span class="dot"></span>
+                    <span id="system-status">System Online</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Insights Section -->
+            <section id="insights-section" class="card">
+                <div class="card-header">
+                    <h2>AI Insights</h2>
+                    <button id="generate-insights-btn" class="btn-primary btn-small">Regenerate</button>
+                </div>
+                <div id="insights-content" class="insights-content">
+                    <p class="placeholder-text">Click regenerate to see AI analysis of your ESG data...</p>
+                </div>
+                <div class="stats-row" id="stats-row">
+                    <!-- Stats will be injected here -->
+                </div>
+            </section>
+
+            <!-- Upload Section -->
+            <section id="upload-section" class="card">
+                <div class="card-header">
+                    <h2>Upload Document</h2>
+                </div>
+                <div class="upload-zone" id="drop-zone">
+                    <div class="upload-icon">📄</div>
+                    <p>Drag & drop ESG reports (PDF/Excel) or click to browse</p>
+                    <input type="file" id="file-input" hidden accept=".pdf,.xlsx,.xls">
+                    <button class="btn-primary" id="browse-btn">Select File</button>
+                </div>
+                <div id="upload-status" class="status-message"></div>
+            </section>
+
+            <!-- Records Section -->
+            <section id="records-section" class="card">
+                <div class="card-header">
+                    <h2>Sustainability Records</h2>
+                    <div class="filters">
+                        <input type="text" id="filter-company" placeholder="Filter by company...">
+                        <select id="filter-year">
+                            <option value="">All Years</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="records-table">
+                        <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Year</th>
+                                <th>Emissions (tCO2e)</th>
+                                <th>Energy (MWh)</th>
+                                <th>Water (m3)</th>
+                                <th>Confidence</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="records-body">
+                            <!-- Records will be injected here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <button id="prev-page" class="btn-icon" disabled>&laquo;</button>
+                    <span id="page-info">Page 1</span>
+                    <button id="next-page" class="btn-icon">&raquo;</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Detail Modal -->
+        <div id="detail-modal" class="modal">
+            <div class="modal-content card">
+                <div class="card-header">
+                    <h2 id="modal-title">Record Details</h2>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div id="modal-body" class="modal-body">
+                    <!-- Details will be injected here -->
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 KarbonWise Engineering. Powered by Google Gemini.</p>
+        </footer>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+
+</html>

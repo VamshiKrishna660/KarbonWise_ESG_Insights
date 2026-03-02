@@ -1,0 +1,17 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+karbonwise.db
+
+# Alembic
+alembic/versions/__pycache__/
+
+# Sample files
+sample_files/*.pdf
+sample_files/*.xlsx
+
+# OS
+.DS_Store
+Thumbs.db
