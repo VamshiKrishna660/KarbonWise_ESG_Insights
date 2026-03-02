@@ -8,9 +8,9 @@ karbonwise.db
 # Alembic
 alembic/versions/__pycache__/
 
-# Sample files
-sample_files/*.pdf
-sample_files/*.xlsx
+# Sample files (uncomment if you want to exclude them, currently included for testing)
+# sample_files/*.pdf
+# sample_files/*.xlsx
 
 # OS
 .DS_Store
