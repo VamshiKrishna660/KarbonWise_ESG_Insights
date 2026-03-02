@@ -2,7 +2,7 @@
 
 An AI-powered ESG (Environmental, Social, Governance) data extraction and analysis platform. This project automates the extraction of structured sustainability metrics from complex PDF and Excel reports using LLMs.
 
-![Frontend Dashboard Dashboard](file:///d:/Vamshi/KarbonWise_Prep/Assignment_karbonwise/FrontendUI.jpeg)
+![Frontend Dashboard](FrontendUI.jpeg)
 
 ## 🚀 Overview
 KarbonWise solves the unstructured data bottleneck in sustainability reporting. It transforms messy, multi-page corporate reports into a standardized, queryable database, allowing for instant analysis and trend identification.
