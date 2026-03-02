@@ -26,6 +26,17 @@ KarbonWise solves the unstructured data bottleneck in sustainability reporting. 
 - **Stateless Extraction**: The LLM prompt is engineered to handle massive context (up to 100k characters) to ensure data-heavy appendices are processed.
 - **Security**: Simple but effective API Key authentication (`X-API-Key`) for backend-to-backend communication.
 
+## 📡 API Endpoints
+All endpoints (except health) require the `X-API-Key: testkey` header.
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/upload` | Upload PDF/Excel. AI extracts metrics & persists to DB. |
+| `GET` | `/records` | List, filter (company/year), and paginate ESG records. |
+| `GET` | `/records/{id}` | Retrieve comprehensive details for a single record. |
+| `GET` | `/insights` | Generate an AI summary analysis of all stored data. |
+| `GET` | `/health` | Simple system health check. |
+
 ## 🏁 Getting Started
 
 ### 1. Setup Environment
